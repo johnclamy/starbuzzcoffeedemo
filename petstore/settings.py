@@ -30,6 +30,7 @@ INSTALLED_APPS = [
     'core',
     'tailwind',
     'theme',
+    'django_browser_reload', # Add django_browser_reload only in DEBUG mode
 ]
 
 
@@ -44,6 +45,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'django_browser_reload.middleware.BrowserReloadMiddleware', # Add BrowserReloadMiddleware only in DEBUG mode
 ]
 
 ROOT_URLCONF = 'petstore.urls'
