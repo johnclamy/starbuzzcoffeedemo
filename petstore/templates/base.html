@@ -54,7 +54,6 @@
         {% block content %}
         {% endblock %}
     </main>
-    <hr class="border-4 mx-auto bg-black dark:bg-white w-1/2">
 
     <!-- Footer -->
     <footer class="bg-[#1D3557] text-slate-200 text-sm py-4">
@@ -68,12 +67,12 @@
             </address>
             <nav class="hidden md:flex flex-col gap-2" arial-label="footer">
                 <a href="" class="hover:opacity-90">Home</a>
-                <a href="" class="hover:opacity-90">Shop</a>
-                <a href="" class="hover:opacity-90">About</a>                    
+                <a href="" class="hover:opacity-90">About</a>
+                <a href="" class="hover:opacity-90">Shop</a>                    
                 <a href="" class="hover:opacity-90"><i class="fa-solid fa-cart-shopping text-[16px]"></i>&nbsp;Cart</a> 
             </nav>
             <div class="flex flex-col md:gap-2">
-                <p class="text-right">Coppyright &copy; All Rights Reserved <i class="not-italic">2026</script></i></p>
+                <p class="text-right">Coppyright &copy; All Rights Reserved <i class="not-italic">{% now "Y" %}</i></p>
             </div>
         </section>
     </footer>
