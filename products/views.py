@@ -49,3 +49,17 @@ def index(request: HttpRequest) -> HttpResponse:
     }
 
     return render(request, 'products/index.html', context)
+
+
+def detail(request: HttpRequest, id: int) -> HttpResponse:
+    product = next((p for p in products if p['id'] == id), None)
+
+    if not product:
+        return HttpResponse('Product not found', status=404)
+
+    context = {
+        'title': f"Pets-R-Us | {product['name']} details",
+        'product': product,
+    }
+
+    return render(request, 'products/detail.html', context)
