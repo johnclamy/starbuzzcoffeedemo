@@ -30,6 +30,7 @@ INSTALLED_APPS = [
     'core',
     'tailwind',
     'theme',
+    'products',
     'django_browser_reload', # Add django_browser_reload only in DEBUG mode
 ]
 
