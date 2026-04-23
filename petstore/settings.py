@@ -127,4 +127,13 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # Enable the use of static assets by locating the folder that contains them
 
-STATICFILES_DIRS = [ BASE_DIR / 'petstore/static/' ] 
+STATICFILES_DIRS = [ BASE_DIR / 'petstore/static/' ]
+
+
+# Specifies the filesystem path to the directory where uploaded media files will be stored.
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+
+# Defines the URL that will be used to access media files in the browser. 
+# This is the base URL for media files.
+MEDIA_URL = '/media/'
